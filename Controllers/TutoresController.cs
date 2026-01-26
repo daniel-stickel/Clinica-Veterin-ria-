@@ -22,20 +22,20 @@ namespace ClinicaVeterinaria.Controllers
         // GET: Tutores
         public async Task<IActionResult> Index()
         {
-              return _context.Tutures != null ? 
-                          View(await _context.Tutures.ToListAsync()) :
+              return _context.Tutores != null ? 
+                          View(await _context.Tutores.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Tutures'  is null.");
         }
 
         // GET: Tutores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Tutures == null)
+            if (id == null || _context.Tutores == null)
             {
                 return NotFound();
             }
 
-            var tutor = await _context.Tutures
+            var tutor = await _context.Tutores
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (tutor == null)
             {
@@ -70,12 +70,12 @@ namespace ClinicaVeterinaria.Controllers
         // GET: Tutores/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Tutures == null)
+            if (id == null || _context.Tutores == null)
             {
                 return NotFound();
             }
 
-            var tutor = await _context.Tutures.FindAsync(id);
+            var tutor = await _context.Tutores.FindAsync(id);
             if (tutor == null)
             {
                 return NotFound();
@@ -121,12 +121,12 @@ namespace ClinicaVeterinaria.Controllers
         // GET: Tutores/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Tutures == null)
+            if (id == null || _context.Tutores == null)
             {
                 return NotFound();
             }
 
-            var tutor = await _context.Tutures
+            var tutor = await _context.Tutores
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (tutor == null)
             {
@@ -141,14 +141,14 @@ namespace ClinicaVeterinaria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Tutures == null)
+            if (_context.Tutores == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Tutures'  is null.");
             }
-            var tutor = await _context.Tutures.FindAsync(id);
+            var tutor = await _context.Tutores.FindAsync(id);
             if (tutor != null)
             {
-                _context.Tutures.Remove(tutor);
+                _context.Tutores.Remove(tutor);
             }
             
             await _context.SaveChangesAsync();
@@ -157,7 +157,7 @@ namespace ClinicaVeterinaria.Controllers
 
         private bool TutorExists(int id)
         {
-          return (_context.Tutures?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Tutores?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lfY0CmIYKCk=",
+  "dgSpecHash": "ie/OQGhT/MM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Clinica Veterinária\\ClinicaVeterinaria\\ClinicaVeterinaria.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Clinica Veterinária\\Clinica-Veterin-ria-\\ClinicaVeterinaria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

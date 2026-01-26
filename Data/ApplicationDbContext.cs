@@ -1,6 +1,7 @@
 ﻿using ClinicaVeterinaria.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ClinicaVeterinaria.Models;
 
 namespace ClinicaVeterinaria.Data
 {
@@ -11,7 +12,7 @@ namespace ClinicaVeterinaria.Data
         {
         }
 
-        public DbSet<Tutor> Tutures { get; set; }
+        public DbSet<Tutor> Tutores { get; set; }
         public DbSet<Animal> Animais { get; set; }
         public DbSet<Consulta> Consultas { get; set; }
     }
