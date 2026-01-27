@@ -301,8 +301,8 @@ C:\Users\Daniel\Desktop\Clinica Veterinária\ClinicaVeterinaria\bin\Debug\net6.0
 C:\Users\Daniel\Desktop\Clinica Veterinária\ClinicaVeterinaria\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\appsettings.json
-C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.staticwebassets.endpoints.json
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.staticwebassets.runtime.json
+C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.staticwebassets.endpoints.json
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.exe
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.deps.json
 C:\Users\Daniel\Desktop\Clinica Veterinária\Clinica-Veterin-ria-\bin\Debug\net6.0\ClinicaVeterinaria.runtimeconfig.json
