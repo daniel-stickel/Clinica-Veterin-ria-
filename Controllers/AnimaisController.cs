@@ -14,12 +14,12 @@ namespace ClinicaVeterinaria.Controllers
     public class AnimaisController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _hostEnvironment; 
+        private readonly IWebHostEnvironment _hostEnvironment;
 
         public AnimaisController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
-            _hostEnvironment = hostEnvironment; 
+            _hostEnvironment = hostEnvironment;
         }
 
         public async Task<IActionResult> Index()
@@ -48,41 +48,56 @@ namespace ClinicaVeterinaria.Controllers
 
         public IActionResult Create()
         {
-          
+
             ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Raca,Cor,Peso,Sexo,ObservacoesMedicas,TutorId")] Animal animal, IFormFile? arquivoFoto)
+        public async Task<IActionResult> Create(int AnimalId, DateTime dataEscolhida, string horaEscolhida, string Motivo)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(horaEscolhida))
             {
-                if (arquivoFoto != null)
-                {
-                    string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivoFoto.FileName);
-                    string caminhoPasta = Path.Combine(_hostEnvironment.WebRootPath, "imagens");
-
-                    if (!Directory.Exists(caminhoPasta))
-                    {
-                        Directory.CreateDirectory(caminhoPasta);
-                    }
-
-                    using (var stream = new FileStream(Path.Combine(caminhoPasta, nomeArquivo), FileMode.Create))
-                    {
-                        await arquivoFoto.CopyToAsync(stream);
-                    }
-
-                    animal.FotoUrl = "/imagens/" + nomeArquivo;
-                }
-
-                _context.Add(animal);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("", "Por favor, selecione um horário.");
             }
-            ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome", animal.TutorId);
-            return View(animal);
+            else
+            {
+                TimeSpan hora = TimeSpan.Parse(horaEscolhida);
+                DateTime dataCompleta = dataEscolhida.Date + hora;
+
+                if (dataCompleta < DateTime.Now)
+                {
+                    ModelState.AddModelError("", "Você não pode agendar uma consulta no passad. Escolha uma data futura.");
+                }
+                else
+                {
+                    bool horarioOcupado = _context.Consultas.Any(c => c.DataHora == dataCompleta);
+
+                    if (horarioOcupado)
+                    {
+                        ModelState.AddModelError("", "Este horário já está reservado. Por favor escolha outro.");
+                    }
+                    else
+                    {
+                        Consulta novaConsulta = new Consulta();
+                        novaConsulta.AnimalId = AnimalId;
+                        novaConsulta.DataHora = dataCompleta;
+                        novaConsulta.Motivo = Motivo;
+
+                        if (ModelState.IsValid)
+                        {
+                            _context.Add(novaConsulta);
+                            await _context.SaveChangesAsync();
+                            return RedirectToAction(nameof(Index));
+                        }
+                    }
+                }
+            }
+            // ... resto do código de recarregar a View ...
+            ViewData["AnimalId"] = new SelectList(_context.Animais, "Id", "Nome", AnimalId);
+            ViewBag.HorariosDisponiveis = new SelectList(Consulta.ObterHorariosPadrao(), horaEscolhida);
+            return View();
         }
 
         public async Task<IActionResult> Edit(int? id)
