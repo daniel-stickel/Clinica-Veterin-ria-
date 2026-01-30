@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting; // Necessário para o upload
+﻿using Microsoft.AspNetCore.Hosting; 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -94,7 +94,6 @@ namespace ClinicaVeterinaria.Controllers
                     }
                 }
             }
-            // ... resto do código de recarregar a View ...
             ViewData["AnimalId"] = new SelectList(_context.Animais, "Id", "Nome", AnimalId);
             ViewBag.HorariosDisponiveis = new SelectList(Consulta.ObterHorariosPadrao(), horaEscolhida);
             return View();

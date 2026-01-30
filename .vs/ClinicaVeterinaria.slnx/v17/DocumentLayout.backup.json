@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:controllers\\consultascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\consultas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:views\\consultas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\controllers\\animaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:controllers\\animaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:views\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\consultas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:views\\consultas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\controllers\\animaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:controllers\\animaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\consultas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:views\\consultas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\consultas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:views\\consultas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\views\\animais\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -71,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:models\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|c:\\users\\daniel\\desktop\\clinica veterin\u00E1ria\\clinica-veterin-ria-\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FABE11D-3798-6F69-0395-892C833DD7E3}|ClinicaVeterinaria.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,11 +109,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Consultas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Index.cshtml",
+              "RelativeToolTip": "Views\\Consultas\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T13:27:32.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Consultas\\Create.cshtml",
@@ -118,13 +139,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Consultas\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Edit.cshtml",
               "RelativeToolTip": "Views\\Consultas\\Edit.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwCUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowDcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-28T18:24:22.55Z",
               "EditorCaption": ""
@@ -137,14 +158,14 @@
               "RelativeDocumentMoniker": "Controllers\\ConsultasController.cs",
               "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\ConsultasController.cs",
               "RelativeToolTip": "Controllers\\ConsultasController.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAswJEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T18:22:49.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
@@ -156,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Animais\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Animais\\Delete.cshtml",
@@ -168,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Animais\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Animais\\Edit.cshtml",
@@ -180,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Animais\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Animais\\Details.cshtml",
@@ -192,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Tiposexo.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Tiposexo.cs",
               "RelativeDocumentMoniker": "Models\\Tiposexo.cs",
@@ -204,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -216,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Consulta.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Consulta.cs",
               "RelativeDocumentMoniker": "Models\\Consulta.cs",
@@ -228,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -240,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Animais\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Animais\\Index.cshtml",
@@ -252,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "20260126201755_CorrigindoNomeTutor.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Migrations\\20260126201755_CorrigindoNomeTutor.cs",
               "RelativeDocumentMoniker": "Migrations\\20260126201755_CorrigindoNomeTutor.cs",
@@ -264,7 +285,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 2,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Animal.cs",
+              "RelativeToolTip": "Models\\Animal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T19:25:04.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnimaisController.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\AnimaisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnimaisController.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\AnimaisController.cs",
+              "RelativeToolTip": "Controllers\\AnimaisController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T19:35:14.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Consultas\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Consultas\\Details.cshtml",
+              "RelativeToolTip": "Views\\Consultas\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-30T13:27:15.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Microsoft.NET.EolTargetFrameworks.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
@@ -276,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -288,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Animais\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Animais\\Create.cshtml",
@@ -296,12 +356,11 @@
               "RelativeToolTip": "Views\\Animais\\Create.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-26T19:50:57.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T19:50:57.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Tutor.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Tutor.cs",
               "RelativeDocumentMoniker": "Models\\Tutor.cs",
@@ -313,20 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AnimaisController.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\AnimaisController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AnimaisController.cs",
-              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\AnimaisController.cs",
-              "RelativeToolTip": "Controllers\\AnimaisController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAuwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T19:35:14.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -338,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Tutores\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Tutores\\Create.cshtml",
@@ -350,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -362,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "TutoresController.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Controllers\\TutoresController.cs",
               "RelativeDocumentMoniker": "Controllers\\TutoresController.cs",
@@ -371,18 +417,6 @@
               "ViewState": "AgIAAIcAAAAAAAAAAAAewJ8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-26T19:27:42.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Animal.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Animal.cs",
-              "RelativeDocumentMoniker": "Models\\Animal.cs",
-              "ToolTip": "C:\\Users\\Daniel\\Desktop\\Clinica Veterin\u00E1ria\\Clinica-Veterin-ria-\\Models\\Animal.cs",
-              "RelativeToolTip": "Models\\Animal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T19:25:04.524Z"
             }
           ]
         }

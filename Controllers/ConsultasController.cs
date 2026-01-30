@@ -89,6 +89,7 @@ namespace ClinicaVeterinaria.Controllers
                         novaConsulta.DataHora = dataCompleta;
                         novaConsulta.Motivo = Motivo;
 
+
                         if (ModelState.IsValid)
                         {
                             _context.Add(novaConsulta);
@@ -99,7 +100,6 @@ namespace ClinicaVeterinaria.Controllers
                 }
             }
 
-
             ViewData["AnimalId"] = new SelectList(_context.Animais, "Id", "Nome", AnimalId);
 
             ViewBag.HorariosDisponiveis = new SelectList(Consulta.ObterHorariosPadrao(), horaEscolhida);
@@ -109,6 +109,7 @@ namespace ClinicaVeterinaria.Controllers
 
 
 
+        // GET: Consultas/Edit/5
         // GET: Consultas/Edit/5
         // GET: Consultas/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -140,10 +141,9 @@ namespace ClinicaVeterinaria.Controllers
 
             consultaBanco.AnimalId = AnimalId;
             consultaBanco.Motivo = Motivo;
-            consultaBanco.Diagnostico = Diagnostico; 
             consultaBanco.DataHora = dataCompleta;
 
-
+            consultaBanco.Diagnostico = Diagnostico;
 
             try
             {
