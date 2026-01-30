@@ -81,8 +81,7 @@
               "RelativeToolTip": "Views\\Consultas\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T14:30:08.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T14:30:08.051Z"
             },
             {
               "$type": "Document",
@@ -94,8 +93,7 @@
               "RelativeToolTip": "Views\\Consultas\\Create.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T14:28:59.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T14:28:59.555Z"
             },
             {
               "$type": "Document",
@@ -107,8 +105,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-27T14:24:56.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T14:24:56.569Z"
             },
             {
               "$type": "Document",
@@ -120,8 +117,7 @@
               "RelativeToolTip": "Controllers\\ConsultasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMwAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T14:24:33.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T14:24:33.624Z"
             },
             {
               "$type": "Document",
@@ -133,8 +129,7 @@
               "RelativeToolTip": "Controllers\\TutoresController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T18:50:34.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T18:50:34.148Z"
             },
             {
               "$type": "Document",
@@ -218,8 +213,7 @@
               "RelativeToolTip": "Models\\Consulta.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAuwAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T17:53:33.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T17:53:33.614Z"
             },
             {
               "$type": "Document",

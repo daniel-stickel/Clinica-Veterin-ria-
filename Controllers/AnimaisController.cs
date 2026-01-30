@@ -22,10 +22,19 @@ namespace ClinicaVeterinaria.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string termoBusca)
         {
-            var applicationDbContext = _context.Animais.Include(a => a.Tutor);
-            return View(await applicationDbContext.ToListAsync());
+            var query = _context.Animais.Include(a => a.Tutor).AsQueryable();
+
+            if( !string.IsNullOrEmpty(termoBusca))
+                {
+                
+                query = query.Where(a => a.Nome.Contains(termoBusca) || a.Raca.Contains(termoBusca));
+
+                ViewData["filtroAtual"] = termoBusca;
+            }
+
+            return View(await query.ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)

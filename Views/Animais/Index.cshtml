@@ -9,6 +9,28 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<h1>Lista de Animais</h1>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <a asp-action="Create" class="btn btn-success">+ Novo Animal</a>
+    </div>
+
+    <div class="col-md-6">
+        <form asp-action="Index" method="get">
+            <div class="input-group">
+                <input type="text" name="termoBusca" class="form-control"
+                       placeholder="Buscar por nome ou raça..."
+                       value="@ViewData["FiltroAtual"]">
+
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Pesquisar 🔍</button>
+                    <a asp-action="Index" class="btn btn-secondary">Limpar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
