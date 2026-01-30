@@ -1,20 +1,37 @@
-﻿using System.Diagnostics;
+﻿using ClinicaVeterinaria.Data;
 using ClinicaVeterinaria.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace ClinicaVeterinaria.Controllers
+
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
+
+            int totalAnimais = _context.Animais.Count();
+
+            int consultasHoje = _context.Consultas
+                .Where(c => c.DataHora.Date == DateTime.Today)
+                .Count();
+
+            int atendimentosRealizados = _context.Consultas
+                .Where(c => c.Diagnostico != null)
+                .Count();
+
+            ViewBag.TotalAnimais = totalAnimais;
+            ViewBag.ConsultasHoje = consultasHoje;
+            ViewBag.AtendimentosRealizados = atendimentosRealizados;
+
             return View();
         }
 

@@ -30,17 +30,13 @@ namespace ClinicaVeterinaria.Controllers
         // GET: Tutores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Tutores == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var tutor = await _context.Tutores
+                .Include(t => t.Animais) 
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (tutor == null)
-            {
-                return NotFound();
-            }
+
+            if (tutor == null) return NotFound();
 
             return View(tutor);
         }

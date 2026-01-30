@@ -37,6 +37,7 @@ namespace ClinicaVeterinaria.Controllers
 
             var animal = await _context.Animais
                 .Include(a => a.Tutor)
+                .Include(a => a.Consultas)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (animal == null)
             {
@@ -46,57 +47,68 @@ namespace ClinicaVeterinaria.Controllers
             return View(animal);
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int? tutorId)
         {
+            Animal animal = new Animal();
 
-            ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome");
-            return View();
+            if (tutorId.HasValue)
+            {
+                animal.TutorId = tutorId.Value;
+
+                var tutor = _context.Tutores.Find(tutorId);
+                if (tutor != null)
+                {
+                    ViewBag.NomeTutorPreSelecionado = tutor.Nome;
+                }
+            }
+
+            ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome", tutorId);
+
+            return View(animal); 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int AnimalId, DateTime dataEscolhida, string horaEscolhida, string Motivo)
+        public async Task<IActionResult> Create(Animal animal, IFormFile? arquivoFoto)
         {
-            if (string.IsNullOrEmpty(horaEscolhida))
+            if (ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Por favor, selecione um horário.");
+                if (arquivoFoto != null && arquivoFoto.Length > 0)
+                {
+                    string pastaDestino = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens");
+
+                    if (!Directory.Exists(pastaDestino))
+                    {
+                        Directory.CreateDirectory(pastaDestino);
+                    }
+
+                    string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivoFoto.FileName);
+
+                    string caminhoCompleto = Path.Combine(pastaDestino, nomeArquivo);
+
+                    using (var stream = new FileStream(caminhoCompleto, FileMode.Create))
+                    {
+                        await arquivoFoto.CopyToAsync(stream);
+                    }
+
+                    animal.FotoUrl = nomeArquivo;
+                }
+
+                _context.Add(animal);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            else
+
+
+            ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome", animal.TutorId);
+
+            if (animal.TutorId > 0)
             {
-                TimeSpan hora = TimeSpan.Parse(horaEscolhida);
-                DateTime dataCompleta = dataEscolhida.Date + hora;
-
-                if (dataCompleta < DateTime.Now)
-                {
-                    ModelState.AddModelError("", "Você não pode agendar uma consulta no passad. Escolha uma data futura.");
-                }
-                else
-                {
-                    bool horarioOcupado = _context.Consultas.Any(c => c.DataHora == dataCompleta);
-
-                    if (horarioOcupado)
-                    {
-                        ModelState.AddModelError("", "Este horário já está reservado. Por favor escolha outro.");
-                    }
-                    else
-                    {
-                        Consulta novaConsulta = new Consulta();
-                        novaConsulta.AnimalId = AnimalId;
-                        novaConsulta.DataHora = dataCompleta;
-                        novaConsulta.Motivo = Motivo;
-
-                        if (ModelState.IsValid)
-                        {
-                            _context.Add(novaConsulta);
-                            await _context.SaveChangesAsync();
-                            return RedirectToAction(nameof(Index));
-                        }
-                    }
-                }
+                var tutor = await _context.Tutores.FindAsync(animal.TutorId);
+                if (tutor != null) ViewBag.NomeTutorPreSelecionado = tutor.Nome;
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animais, "Id", "Nome", AnimalId);
-            ViewBag.HorariosDisponiveis = new SelectList(Consulta.ObterHorariosPadrao(), horaEscolhida);
-            return View();
+
+            return View(animal);
         }
 
         public async Task<IActionResult> Edit(int? id)
@@ -115,9 +127,10 @@ namespace ClinicaVeterinaria.Controllers
             return View(animal);
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Raca,Cor,Peso,Sexo,ObservacoesMedicas,FotoUrl,TutorId")] Animal animal)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Raca,Cor,Peso,Sexo,ObservacoesMedicas,FotoUrl,TutorId")] Animal animal, IFormFile? arquivoFoto)
         {
             if (id != animal.Id)
             {
@@ -128,22 +141,34 @@ namespace ClinicaVeterinaria.Controllers
             {
                 try
                 {
+                    if (arquivoFoto != null && arquivoFoto.Length > 0)
+                    {
+                        string pastaDestino = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens");
+                        if (!Directory.Exists(pastaDestino)) Directory.CreateDirectory(pastaDestino);
+
+                        string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivoFoto.FileName);
+
+                        string caminhoCompleto = Path.Combine(pastaDestino, nomeArquivo);
+                        using (var stream = new FileStream(caminhoCompleto, FileMode.Create))
+                        {
+                            await arquivoFoto.CopyToAsync(stream);
+                        }
+
+                        animal.FotoUrl = nomeArquivo;
+                    }
+
+
                     _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AnimalExists(animal.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    if (!_context.Animais.Any(e => e.Id == id)) return NotFound();
+                    else throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["TutorId"] = new SelectList(_context.Tutores, "Id", "Nome", animal.TutorId);
             return View(animal);
         }

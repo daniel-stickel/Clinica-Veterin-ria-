@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>informação sobre o Tutor</h1>
 
 <div>
     <h4>Tutor</h4>
@@ -30,7 +30,52 @@
         </dd>
     </dl>
 </div>
+<hr />
+<div class="d-flex justify-content-between align-items-center">
+    <h3>Meus Animais</h3>
+    <a asp-controller="Animais" asp-action="Create" asp-route-tutorId="@Model.Id" class="btn btn-outline-primary btn-sm">
+        + Adicionar Novo Pet
+    </a>
+</div>
+
+@if (Model.Animais != null && Model.Animais.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome do Pet</th>
+                <th>Espécie/Raça</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var animal in Model.Animais)
+            {
+                <tr>
+                    <td style="font-weight: bold; color: #4a4a4a;">
+                        @animal.Nome
+                    </td>
+                    <td>
+                        @animal.Raca
+                    </td>
+                    <td>
+                        <a asp-controller="Animais" asp-action="Details" asp-route-id="@animal.Id" class="btn btn-info btn-sm text-white">
+                            📄 Ver Prontuário
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-secondary mt-3">
+        Este tutor ainda não tem animais cadastrados.
+    </div>
+}
+<br />
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Editar cadastro do Tutor" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Voltar para a lista</a>
 </div>

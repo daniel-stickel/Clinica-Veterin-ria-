@@ -10,51 +10,73 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+
+            <input type="hidden" asp-for="FotoUrl" />
+            <input type="hidden" asp-for="TutorId" />
+
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Raca" class="control-label"></label>
                 <input asp-for="Raca" class="form-control" />
                 <span asp-validation-for="Raca" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Cor" class="control-label"></label>
                 <input asp-for="Cor" class="form-control" />
                 <span asp-validation-for="Cor" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Peso" class="control-label"></label>
                 <input asp-for="Peso" class="form-control" />
                 <span asp-validation-for="Peso" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Sexo" class="control-label"></label>
-                <select asp-for="Sexo" class="form-control"></select>
-                <span asp-validation-for="Sexo" class="text-danger"></span>
+                <label class="control-label">Sexo</label>
+                <select asp-for="Sexo" class="form-control">
+                    <option value="Macho">Macho</option>
+                    <option value="Femea">Fêmea</option>
+                </select>
             </div>
+
             <div class="form-group">
                 <label asp-for="ObservacoesMedicas" class="control-label"></label>
                 <input asp-for="ObservacoesMedicas" class="form-control" />
                 <span asp-validation-for="ObservacoesMedicas" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FotoUrl" class="control-label"></label>
-                <input asp-for="FotoUrl" class="form-control" />
-                <span asp-validation-for="FotoUrl" class="text-danger"></span>
+
+            <div class="form-group border p-3 rounded">
+                <label class="control-label font-weight-bold">Foto Atual</label>
+                <br />
+                @if (!string.IsNullOrEmpty(Model.FotoUrl))
+                {
+                    <img src="~/imagens/@Model.FotoUrl" style="max-width: 150px; border-radius: 10px; margin-bottom: 10px;" />
+                    <br />
+                }
+                else
+                {
+                    <span class="text-muted">Sem foto cadastrada.</span>
+                    <br />
+                }
+
+                <label class="control-label mt-2">Alterar Foto (Opcional)</label>
+                <input type="file" name="arquivoFoto" class="form-control" />
             </div>
+
+            <br />
             <div class="form-group">
-                <label asp-for="TutorId" class="control-label"></label>
-                <select asp-for="TutorId" class="form-control" asp-items="ViewBag.TutorId"></select>
-                <span asp-validation-for="TutorId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
             </div>
         </form>
     </div>

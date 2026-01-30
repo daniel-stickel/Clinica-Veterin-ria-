@@ -60,6 +60,47 @@
         </dd>
     </dl>
 </div>
+<hr />
+<h3>🩺 Prontuário Médico (Histórico)</h3>
+
+@if (Model.Consultas != null && Model.Consultas.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Data</th>
+                <th>Motivo</th>
+                <th>Diagnóstico</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var consulta in Model.Consultas.OrderByDescending(c => c.DataHora))
+            {
+                <tr>
+                    <td>@consulta.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@consulta.Motivo</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(consulta.Diagnostico))
+                        {
+                            <span class="text-primary">@consulta.Diagnostico</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted"><i>Sem diagnóstico</i></span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        Este animal ainda não possui histórico de consultas.
+    </div>
+}
+<br />
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

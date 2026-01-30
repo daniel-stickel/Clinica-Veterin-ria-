@@ -4,50 +4,68 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Consultas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Agendar Nova Consulta</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DataHora)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Motivo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Diagnostico)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Animal)
-            </th>
-            <th></th>
+            <th>Data/Hora</th>
+            <th>Status</th>
+            <th>Motivo</th>
+            <th>Diagnóstico</th>
+            <th>Paciente</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataHora)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Motivo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Diagnostico)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Animal.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            string classeLinha = "";
+            if (item.DataHora.Date == DateTime.Today)
+            {
+                classeLinha = "table-info font-weight-bold";
+            }
+
+            <tr class="@classeLinha">
+                <td>
+                    @item.DataHora.ToString("dd/MM/yyyy HH:mm")
+                </td>
+
+                <td>
+                    @if (string.IsNullOrEmpty(item.Diagnostico))
+                    {
+                        <span class="badge bg-danger text-dark">Aguardando</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success text-black ">Concluído</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motivo)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.Diagnostico) && item.Diagnostico.Length > 20)
+                    {
+                        @item.Diagnostico.Substring(0, 20) <text>...</text>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Diagnostico)
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Animal.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Atender/Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

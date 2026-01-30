@@ -40,6 +40,8 @@
         </tr>
     </thead>
     <tbody>
+
+
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -63,11 +65,14 @@
                 <td>
                     @if (!string.IsNullOrEmpty(item.FotoUrl))
                     {
-                        <img src="@item.FotoUrl" style="max-width: 230px; max-height: 230px; border-radius: 5px" />
+                        <img src="/imagens/@item.FotoUrl"
+                             asp-append-version="true"
+                             alt="Foto do @item.Nome"
+                             style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%;" />
                     }
                     else
                     {
-                        <span>Sem Fotinho do Bichano</span>
+                        <span class="text-muted" style="font-size: 0.8em;">Sem foto</span>
                     }
                 </td>
                 <td>

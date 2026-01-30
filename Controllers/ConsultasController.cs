@@ -22,7 +22,10 @@ namespace ClinicaVeterinaria.Controllers
         // GET: Consultas
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Consultas.Include(c => c.Animal);
+            var applicationDbContext = _context.Consultas
+                .Include(c => c.Animal)
+                .OrderByDescending(c => c.DataHora);
+
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -107,10 +110,6 @@ namespace ClinicaVeterinaria.Controllers
             return View();
         }
 
-
-
-        // GET: Consultas/Edit/5
-        // GET: Consultas/Edit/5
         // GET: Consultas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

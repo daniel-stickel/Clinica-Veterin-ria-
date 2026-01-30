@@ -1,8 +1,61 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4">🐶 Painel Veterinário</h1>
+    <p>Bem-vindo ao sistema de gestão da sua clínica.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3 shadow">
+            <div class="card-header">Total de Pacientes</div>
+            <div class="card-body">
+                <h2 class="card-title display-4">@ViewBag.TotalAnimais</h2>
+                <p class="card-text">Animais cadastrados na base.</p>
+            </div>
+            <div class="card-footer bg-transparent border-light text-right">
+                <a asp-controller="Animais" asp-action="Index" class="text-white">Ver Lista &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-dark bg-warning mb-3 shadow">
+            <div class="card-header font-weight-bold">📅 Agenda de Hoje</div>
+            <div class="card-body">
+                <h2 class="card-title display-4">@ViewBag.ConsultasHoje</h2>
+                <p class="card-text">Consultas marcadas para hoje.</p>
+            </div>
+            <div class="card-footer bg-transparent border-dark text-right">
+                <a asp-controller="Consultas" asp-action="Index" class="text-dark">Ver Agenda &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3 shadow">
+            <div class="card-header">Atendimentos Concluídos</div>
+            <div class="card-body">
+                <h2 class="card-title display-4">@ViewBag.AtendimentosRealizados</h2>
+                <p class="card-text">Consultas com diagnóstico finalizado.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="mt-4" />
+
+<div class="row mt-4 justify-content-center">
+    <div class="col-md-3">
+        <a asp-controller="Tutores" asp-action="Create" class="btn btn-outline-dark btn-lg btn-block">
+            👤 Novo Tutor
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Consultas" asp-action="Create" class="btn btn-outline-primary btn-lg btn-block">
+            📅 Agendar Consulta
+        </a>
+    </div>
 </div>
